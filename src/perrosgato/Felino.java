@@ -4,17 +4,12 @@
  */
 package perrosgato;
 
-import javax.swing.JOptionPane;
-
-/**
- *
- * @author LENOVO
- */
 public class Felino {
 
     private String nombre;
     private String raza;
     private String color;
+    private String mensaje;
     private int edad;
     private int Ne;
 
@@ -22,9 +17,18 @@ public class Felino {
         nombre = "";
         raza = "";
         color = "";
+        mensaje="";
         edad = 0;
         Ne = 0;
         
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 
     
@@ -70,7 +74,9 @@ public class Felino {
     }
 
       public String datos(){
-        return "El gato se llama "+nombre+" es un "+raza+ " es de color" +color + " y tiene "+edad+" años  \n";
+
+        return "El gato se llama "+getNombre()+", es un "+getRaza()+ ", es de color" +getColor() + ", tiene "+getEdad()+" años,"+" el felino "+getMensaje()+"padece de toxoplasmosis";
+
       }
    
 

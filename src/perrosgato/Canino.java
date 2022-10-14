@@ -4,10 +4,6 @@
  */
 package perrosgato;
 
-/**
- *
- * @author LENOVO
- */
 public class Canino {
 
     private String nombre;
@@ -64,7 +60,7 @@ public class Canino {
         this.Ne = Ne;
     }
           public String datos(){
-        return "El gato se llama "+nombre+" es un "+raza+ " es de color" +color + " y tiene "+edad+" años  \n";
+        return "El perro se llama "+getNombre()+", es de raza "+getRaza()+ ", es de color " +getColor() + ", tiene "+getEdad()+" años,  \n"+"y tiene un nivel "+getNe()+" de entrenamiento.";
       }
    
 

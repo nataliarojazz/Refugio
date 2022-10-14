@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import javax.swing.JOptionPane;
 
-public class ArraylisTperro extends PerrosGato{
+public class ArraylisTperro extends PerrosGato {
 
     ArrayList<Canino> Can = new ArrayList();
 
@@ -29,9 +29,9 @@ public class ArraylisTperro extends PerrosGato{
         String raza = Input("Ingrese el nombre de la raza");
         String color = Input("Ingrese el color del Perro");
         int edad = Input1("Ingrese la edad del Perro");
-        int Ne = Input2("Ingrese El nivel de 1 a 10 de entrenamiento del gato");
+        int Ne = Input2("Ingrese El nivel de 1 a 10 de entrenamiento del perro");
         if (Ne > 10) {
-            JOptionPane.showMessageDialog(null, "Solo de 1 a 10");
+            JOptionPane.showMessageDialog(null, "Solo de 0 a 10");
         }
         Canino Cani = new Canino();
         Cani.setNombre(nombre);
@@ -43,22 +43,20 @@ public class ArraylisTperro extends PerrosGato{
     }
 
     public void getCanino() {
-         Iterator it = Can.iterator();
+        Iterator it = Can.iterator();
         //verifica si existe otro elemento con el método hasNext()
         while (it.hasNext()) {
             Object objeto = it.next();
             Canino cani = (Canino) objeto;
             JOptionPane.showMessageDialog(null, cani.datos());
         }
-    
+
     }
 
     public void limpiar() {
-          int opcion;
+        int opcion;
+        JOptionPane.showMessageDialog(null, "Tener en cuenta que el primer dato incertado empiezo en 0");
         opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el la posicion a eliminar"));
         Can.remove(opcion);
     }
-    }
-
-
-
+}

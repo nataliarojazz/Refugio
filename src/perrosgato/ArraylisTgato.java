@@ -25,13 +25,25 @@ public class ArraylisTgato extends PerrosGato {
         String raza = Input("Ingrese el nombre de la raza");
         String color = Input("Ingrese el color del Felino");
         int edad = Input1("Ingrese la edad del gato");
-        int Ne = Input2("Ingrese El nivel de 1 a 10 de entrenamiento del gato");
-        if (Ne > 10) {
-            JOptionPane.showMessageDialog(null, "Solo de 1 a 10");
+        int Ne = JOptionPane.showConfirmDialog(null, "El felino padece de toxoplasmosis.",
+                "YES_NO_OPTION", JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE);
+         
+                String mensaje = "";
+        switch (Ne) {
+        case 0:
+            mensaje = " Sí ";
+            
+            break;
+        case 1:
+            mensaje = " No ";
+            break;
         }
+        JOptionPane.showMessageDialog(null, mensaje);
         Felino Fe = new Felino();
         Fe.setNombre(nombre);
         Fe.setRaza(raza);
+        Fe.setMensaje(mensaje);
         Fe.setColor(color);
         Fe.setEdad(edad);
         Fe.setNe(Ne);

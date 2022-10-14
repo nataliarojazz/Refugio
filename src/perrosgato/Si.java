@@ -14,9 +14,12 @@ public class Si extends javax.swing.JFrame {
         jToggleButton2 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 51));
 
         jLabel1.setText("Sitio De Rescate");
 
+        jToggleButton1.setBackground(new java.awt.Color(255, 153, 153));
+        jToggleButton1.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton1.setText("Añadir Canino");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -24,6 +27,8 @@ public class Si extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton2.setBackground(new java.awt.Color(204, 102, 255));
+        jToggleButton2.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton2.setText("Añadir Felino");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,9 +87,9 @@ public class Si extends javax.swing.JFrame {
                 case 3:
                     obj1.limpiar();
                 case 4:
-                    JOptionPane.showMessageDialog(null, "Adio");
+                    JOptionPane.showMessageDialog(null, "Eliminado");
                 default:
-                    JOptionPane.showMessageDialog(null, "No encontrado");
+                    JOptionPane.showMessageDialog(null, "Canino no encontrado");
                     break;
 
             }
@@ -114,9 +119,9 @@ public class Si extends javax.swing.JFrame {
                 case 3:
                     obj.limpiar();
                 case 4:
-                    JOptionPane.showMessageDialog(null, "Adio");
+                    JOptionPane.showMessageDialog(null, "Eliminado");
                 default:
-                    JOptionPane.showMessageDialog(null, "No encontrado");
+                    JOptionPane.showMessageDialog(null, "Felino no encontrado");
                     break;
 
             }
