@@ -44,7 +44,6 @@ public class ArraylisTperro extends PerrosGato {
 
     public void getCanino() {
         Iterator it = Can.iterator();
-        //verifica si existe otro elemento con el método hasNext()
         while (it.hasNext()) {
             Object objeto = it.next();
             Canino cani = (Canino) objeto;
